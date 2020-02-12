@@ -1,12 +1,13 @@
+// * with out arguments * //
 #include<stdio.h>
-int main()
+int add(int a,int b)
 {
-int n,i;
-scanf("%d",&n);
-for(i=1;i<=n;i++)
-{
-    if(i%2==0)
-    printf("%d",i);
+return a+b;
 }
-return 0;
+void main()
+{
+int a;
+a=add(10,20);
+printf("%d",a);
+printf("%d",add(100,200));
 }
