@@ -1,12 +1,12 @@
+// * with return value and without arguments *//
 #include<stdio.h>
-int main()
+int add()
 {
-int n,i,sum=0;
-scanf("%d",&n);
-for(i=1;i<=n;i++)
-{
-sum=sum+i*i*i;
+    int a,b;
+    scanf("%d%d",&a,&b);
+    return a+b;
 }
-printf("%d",sum);
-return 0;
+void main()
+{
+    printf("%d",add());
 }
