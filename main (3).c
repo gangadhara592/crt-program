@@ -1,12 +1,18 @@
+// * with out arguments * //
 #include<stdio.h>
-int main()
+void prime(int n)
 {
-int n,i,sum=0;
-scanf("%d",&n);
-for(i=1;i<=n;i++)
-{
-sum=sum+i;
+    int i,count=0;
+    for(i=2;i<n;i++)
+    if(n%i==0)
+    count++;
+    if(count==0)
+    printf("%d is prime\n",n);
+    else
+    printf("%d is not prime\n",n);
 }
-printf("%d",sum);
-return 0;
+void main()
+{
+    prime(10);
+    prime(7);
 }
