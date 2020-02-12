@@ -1,9 +1,15 @@
 #include<stdio.h>
-int main()
+void even_odd(int n)
 {
-int n,i;
-scanf("%d",&n);
-for(i=1;i<=n;i++)
-printf("%d",i);	
-return 0;
+    if (n%2==0)
+    printf("%d is even\n",n);
+    else
+    printf("%d is odd\n",n);
 }
+void main()
+{
+    even_odd(10);
+    even_odd(9);
+}
+
+
