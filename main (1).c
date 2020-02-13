@@ -1,15 +1,14 @@
-#include<stdio.h>
-void even_odd(int n)
-{
-    if (n%2==0)
-    printf("%d is even\n",n);
-    else
-    printf("%d is odd\n",n);
-}
+/* assigning array and addition of elements */
+
+#include <stdio.h>
 void main()
 {
-    even_odd(10);
-    even_odd(9);
+    int n,i,sum=0;
+    scanf("%d",&n);
+    int arr[n];
+    for(i=0;i<n;i++)
+    scanf("%d",&arr[i]);
+    for(i=0;i<n;i++)
+    sum+=arr[i];
+    printf("%d",sum);
 }
-
-
