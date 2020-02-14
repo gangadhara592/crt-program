@@ -1,12 +1,17 @@
-#include <stdio.h>
+/* removing outer elements from array */
+#include<stdio.h>
 void main()
 {
-    int n,i;
-    scanf("%d",&n);
-    int arr[5];
-    for(i=0;i<n;i++)
-    scanf("%d",&arr[i]);
-    for(i=0;i<n;i++)
-    printf("%d",arr[i]);
-    
+    int i,j,row,col;
+    scanf("%d%d",&row,&col);
+    int arr[row] [col];
+    for(i=0;i<row;i++)
+    for (j=0;j<col;j++)
+    scanf("%d",&arr[i] [j]);
+    for(i=1;i<row-1;i++)
+    {
+    for(j=1;j<col-1;j++)
+    printf("%d   ",arr[i] [j]);
+    printf("\n");
+    }
 }
