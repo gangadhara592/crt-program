@@ -1,3 +1,4 @@
+/* rows and columns using arrays */
 #include<stdio.h>
 void main()
 {
