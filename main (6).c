@@ -1,16 +1,16 @@
 #include<stdio.h>
-int main()
+void main()
 {
-int n,i,count=0;
-scanf("%d",&n);
-for(i=1;i<=n;i++)
-{
-if(n%i==0)
-count++;
-}
-if(count==2)
-printf("prime");
-else
-printf("not prime");
-return 0;
+    int i,j,row,col;
+    scanf("%d%d",&row,&col);
+    int arr[row] [col];
+    for(i=0;i<row;i++)
+    for (j=0;j<col;j++)
+    scanf("%d",&arr[i] [j]);
+    for(i=0;i<row;i++)
+    {
+    for(j=0;j<col;j++)
+    printf("%d",arr[i] [j]);
+    printf("\n");
+    }
 }
