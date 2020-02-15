@@ -1,27 +1,14 @@
-/* adam number */
+/* add of int using string */
 #include<stdio.h>
-int palindrome(int n)
+void main()
 {
-    int r=0,t;
-    t = n;
-    while (n>0)
-  {
-    r = (r*10)+(n%10);
-    n = n/10;
-  }
-    if(r==t)
-    return t;
-    else
-    return 0;
-  }
-  void main()
-  {
-      int n,f;
-      scanf("%d",&n);
-      f=palindrome(n);
-      if(palindrome(n*n)==f*f)
-      printf("adam number");
-      else
-      printf("not an adam number");
-  }
-
+    char s[10];
+    int i,sum=0;
+    gets(s);
+    for(i=0;s[i]!='\0';i++)
+    {
+      if(s[i]>='0'&&s[i]<='9')
+      sum+=(s[i]-48);
+    }
+    printf("sum:%d",sum);
+}

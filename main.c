@@ -1,17 +1,14 @@
-/* removing outer elements from array */
+/* counting no. of characters using string */
 #include<stdio.h>
+#include<string.h>
 void main()
 {
-    int i,j,row,col;
-    scanf("%d%d",&row,&col);
-    int arr[row] [col];
-    for(i=0;i<row;i++)
-    for (j=0;j<col;j++)
-    scanf("%d",&arr[i] [j]);
-    for(i=1;i<row-1;i++)
-    {
-    for(j=1;j<col-1;j++)
-    printf("%d   ",arr[i] [j]);
-    printf("\n");
-    }
+    char s[10];
+    int i,n;
+    gets (s);
+    n=strlen(s);
+    for(i=0;s[i] !='\0';i++)
+    printf("%c\n",s[i]);
+    for(i=0;i<n;i++)
+    printf("%c\n",s[i]);
 }

@@ -1,22 +1,16 @@
-/* max elements in a row and column */
+/* counting no. of vowels and consonants using string */
 #include<stdio.h>
 void main()
 {
-    int i,j,row,col,max;
-    scanf("%d%d",&row,&col);
-    int arr[row] [col];
-    for(i=0;i<row;i++)
-    for(j=0;j<col;j++)
-    scanf("%d",&arr[i][j]);
-    for(i=0;i<row;i++)
+    char s[10];
+    int i,v=0,c=0;
+    gets (s);
+    for(i=0;s[i]!='\0';i++)
     {
-        max=arr[i][0];
-        for(j=0;j<col;j++)
-        {
-            if(max<arr[i][j])
-            max=arr[i][j];
-        }
-        printf("%d",max);
-        printf("\n");
-}
+        if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u')
+           v++;
+        else
+          c++;
+    }
+    printf("v:%d c:%d",v,c);
 }
