@@ -1,14 +1,11 @@
-/* counting no. of characters using string */
+/*  adding character using string */ 
 #include<stdio.h>
 #include<string.h>
-void main()
+int main()
 {
-    char s[10];
-    int i,n;
-    gets (s);
-    n=strlen(s);
-    for(i=0;s[i] !='\0';i++)
-    printf("%c\n",s[i]);
-    for(i=0;i<n;i++)
-    printf("%c\n",s[i]);
+    char s1[10]="hello";
+    char s2[10]="world";
+    strcat(s1,s2);
+    printf("output string after concatenation:%s",s1);
+    return 0;
 }

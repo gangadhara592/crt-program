@@ -1,16 +1,20 @@
-/* counting no. of vowels and consonants using string */
+/*  comparing the strings */ 
 #include<stdio.h>
-void main()
+#include<string.h>
+int main()
 {
-    char s[10];
-    int i,v=0,c=0;
-    gets (s);
-    for(i=0;s[i]!='\0';i++)
+    char s1[20]="ece gurus";
+    char s2[20]="ece gurus";
+    int i;
+      if(strcmp(s1,s2)==0)
     {
-        if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u')
-           v++;
-        else
-          c++;
+        printf("string s1and string 2 are equal");
+    } 
+    else
+    {
+        printf("string 1 and 2 are different");
     }
-    printf("v:%d c:%d",v,c);
+    i=strcmp(s1,s2);
+    printf("\n%d",i);
+    return 0;
 }
