@@ -1,11 +1,17 @@
-/*  adding required characters using string */ 
+/* find largest element */ 
 #include<stdio.h>
-#include<string.h>
-int main()
+#include<limits.h>
+void main()
 {
-    char s1[10]="hello";
-    char s2[10]="world";
-    strncat(s1,s2,3);
-    printf("output string after concatenation:%s",s1);
-    return 0;
+    int a[100],i,n,l=INT_MIN;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+  l=a[0];
+  for(i=1;i<n;i++)
+  {
+      if(a[i]>l)
+      l=a[i];
+  }
+  printf("%d",l);
 }

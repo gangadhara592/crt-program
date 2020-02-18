@@ -1,20 +1,10 @@
-/*  comparing the strings */ 
+/* pointers */
 #include<stdio.h>
-#include<string.h>
-int main()
+void main()
 {
-    char s1[20]="ece gurus";
-    char s2[20]="ece gurus";
-    int i;
-      if(strcmp(s1,s2)==0)
-    {
-        printf("string s1and string 2 are equal");
-    } 
-    else
-    {
-        printf("string 1 and 2 are different");
-    }
-    i=strcmp(s1,s2);
-    printf("\n%d",i);
-    return 0;
+    int a=10;
+    int *p;
+    p=&a;
+    printf("\n a=%d",a);
+    printf("\n*p=%d",*p);
 }

@@ -1,17 +1,11 @@
-/* rows and columns using arrays */
+/* 2 dimensional arrays in pointers*/
 #include<stdio.h>
 void main()
 {
-    int i,j,row,col;
-    scanf("%d%d",&row,&col);
-    int arr[row] [col];
-    for(i=0;i<row;i++)
-    for (j=0;j<col;j++)
-    scanf("%d",&arr[i] [j]);
-    for(i=0;i<row;i++)
-    {
-    for(j=0;j<col;j++)
-    printf("%d",arr[i] [j]);
-    printf("\n");
-    }
+    int b[3][4]={{5,10,15,20},{25,30,35,40},{45,50,55,60}};
+    int *r;
+    r=&b[0][0];
+    printf("\n%d",*r);
+    printf("\n%d",*(r+1));
+    printf("\n%d",r[10]);
 }

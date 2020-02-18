@@ -1,10 +1,12 @@
-/* word in a column using string */
+/* pointers with address value */
 #include<stdio.h>
 void main()
 {
-    char s[10];
-    int i=0;
-    gets (s);
-    for(i;s[i]!='\0';i++)
-    printf("%c\n",s[i]);
+    int a=10;
+    int *p;
+    p=&a;
+    printf("\n a=%d",a);
+    printf("\n*p=%d",*p);
+    printf("\n address of a=%p",&a);
+    printf("\n address of a=%p",p);
 }

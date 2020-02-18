@@ -1,13 +1,28 @@
+/* pointer arthmetic #3(1)*/
 #include<stdio.h>
-int main()
+void main()
 {
-int n,i;
-scanf("%d",&n);
-i=1;
-while(i<=n)
-{
-    printf("%d",i);
-    i++;
+    int i,runs=0;
+    char a[6];
+    for(i=0;i<6;i++)
+    scanf(" %c",a+i);
+    for(i=0;i<6;i++)
+    {
+        if(*(a+i)!='w')
+    runs=runs+*(a+i)-48;
+    }
+    printf("total runs= %d",runs);
+    for(i=0;i<4;i++)
+    {
+        if(*(a+i)==*(a+i+1)&&*(a+i)==*(a+i+2))
+        {
+            if(*(a+i)=='4')
+            printf("\n hat-trick 4");
+            if(*(a+i)=='6')
+            printf("\n hat-trick 6");
+            if(*(a+i)=='w');
+            printf("\n hat-trick wicket");
+        }
+    }
 }
-return 0;
-}
+

@@ -1,16 +1,19 @@
-/* checking the upper and lower alphabets using string */
+/* pointers with address value */
+#include<limits.h>
 #include<stdio.h>
 void main()
 {
-    char s[10];
-    int i,u=0,l=0;
-    gets(s);
-    for(i=0;s[i]!='\0';i++)
+    int a[100],n,l=INT_MIN;
+    int i;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    scanf("%d",a+i);
+    for(i=0;i<n;i++)
+    printf("%d",*(a+i));
+    for(i=0;i<n;i++)
     {
-       if(s[i]>='A'&&s[i]<='Z')
-       u++;
-       else if(s[i]>='a'&&s[i]<='z')
-       l++;
+        if(*(a+i)>l)
+        l=*(a+i);
     }
-    printf("u:%d l:%d",u,l);
+    printf("%d",l);
 }

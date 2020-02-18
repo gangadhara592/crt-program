@@ -1,11 +1,22 @@
-/*  adding character using string */ 
+/* find second largest element */ 
 #include<stdio.h>
-#include<string.h>
-int main()
+#include<limits.h>
+void main()
 {
-    char s1[10]="hello";
-    char s2[10]="world";
-    strcat(s1,s2);
-    printf("output string after concatenation:%s",s1);
-    return 0;
+    int a[100],i,n,l1,l2;
+    l1=l2=INT_MIN;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+  for(i=1;i<n;i++)
+  {
+      if(a[i]>l1)
+      {
+          l2=l1;
+          l1=a[i];
+      }
+      else if(a[i]>l2)
+      l2=a[i];
+  }
+  printf("%d",l2);
 }
