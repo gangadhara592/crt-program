@@ -1,27 +1,25 @@
-/* no sorting #3*/
 #include<stdio.h>
+struct sample
+{
+int x;
+float y;
+char z;
+struct sample *p1;
+};
 void main()
 {
-    int a[20],i,j,n,t,flag;
-    scanf("%d",&n);
-    for(i=0;i<n;i++)
-    scanf("%d",&a[i]);
-    for(i=0;i<n;i++)
-    {
-    for(j=0;j<n;j++)
-    {
-        if(a[j]>a[j+1])
-        {
-            t=a[j];
-            a[j]=a[j+1];
-            a[j+1]=t;
-            flag=1;
-        }
-    }
-    if(flag=0)
-    {
-        printf("no need to sort");
-        break;
-    }
-    }
+struct sample s1;
+struct sample s2={12,45.6,'D',NULL};
+struct sample s3={10,4.7,'m',&s2};
+s1.x=85;
+s1.y=7.2;
+s1.z='j';
+s1.p1=&s3;
+printf("\n %d",s1.x);
+printf("\n %f",s1.y);
+printf("\n %c",s1.z);
+printf("\n %d",(s3.p1)->x);
+printf("\n %f",s3.p1->y);
+printf("\n %c",s3.p1->z);
+printf("\n %p",s3.p1->p1);
 }

@@ -1,24 +1,23 @@
-/* sorting #2*/
-#include<stdio.h>
+/* nested structuers */
+#include <stdio.h>
+struct student
+{
+    struct person
+    {
+        char name[20];
+        int age;
+        char dob[10];
+    }p;
+    int rollno;
+    float marks;
+}stu;
 void main()
 {
-    int a[100],i,j,n,t,min,k;
-    scanf("%d",&n);
-    for(i=0;i<n;i++)
-    scanf("%d",&a[i]);
-    for(i=0;i<n;i++)
-    {
-        min=i;
-        for(j=i+1;j<n;j++)
-        {
-            if(a[j]>a[min])
-            min=j;
-        }
-        t=a[min];
-        a[min]=a[i];
-        a[i]=t;
-        printf("\n pass %d:",i+1);
-        for(k=0;k<n;k++)
-        printf(" %d",a[k]);
-    }
+    printf("enter rollno");
+    scanf("%d",&stu.rollno);
+    printf("enter name");
+    scanf("%s",stu.p.name);
+    printf("enter age");
+    scanf("%d",&stu.p.age);
 }
+    
