@@ -1,12 +1,24 @@
-/* pointers with address value */
+/* sorting half of the numbers #3*/
 #include<stdio.h>
 void main()
 {
-    int a=10;
-    int *p;
-    p=&a;
-    printf("\n a=%d",a);
-    printf("\n*p=%d",*p);
-    printf("\n address of a=%p",&a);
-    printf("\n address of a=%p",p);
+    int a[100],i,j,n,t,min,k;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    for(i=0;i<(n/2)-1;i++)
+    {
+        min=i;
+        for(j=i+1;j<n/2;j++)
+        {
+            if(a[j]<a[min])
+            min=j;
+        }
+        t=a[min];
+        a[min]=a[i];
+        a[i]=t;
+        printf("\n pass %d:",i+1);
+        for(k=0;k<n;k++)
+        printf(" %d",a[k]);
+    }
 }

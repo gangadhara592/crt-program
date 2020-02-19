@@ -1,13 +1,13 @@
-/*  malloc program */
+/* finding prime without loop */
 #include<stdio.h>
-#include<stdlib.h>
 void main()
 {
-    int *a,i,n;
+    int n;
     scanf("%d",&n);
-    a=(int*)malloc(n*sizeof(int));
-    for(i=0;i<n;i++)
-    scanf("%d",a+i);
-    for(i=0;i<n;i++)
-    printf("%d ",*(a+i));
+    if(n==2||n==3||n==5||n==7)
+    printf("prime number");
+    if(n%2!=0&&n%3!=0&&n%5!=0&&n%7!=0)
+    printf("prime number");
+    else
+    printf("not");
 }

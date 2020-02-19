@@ -1,13 +1,24 @@
-/*  calloc program */
+/* sorting #1 */
 #include<stdio.h>
-#include<stdlib.h>
 void main()
 {
-    int *a,i,n;
+    int a[100],i,j,n,t,min,k;
     scanf("%d",&n);
-    a=(int*)calloc(n,sizeof(int));
     for(i=0;i<n;i++)
-    scanf("%d",a+i);
+    scanf("%d",&a[i]);
     for(i=0;i<n;i++)
-    printf("%d",*(a+i));
+    {
+        min=i;
+        for(j=i+1;j<n;j++)
+        {
+            if(a[j]<a[min])
+            min=j;
+        }
+        t=a[min];
+        a[min]=a[i];
+        a[i]=t;
+        printf("\n pass %d:",i+1);
+        for(k=0;k<n;k++)
+        printf(" %d",a[k]);
+    }
 }
