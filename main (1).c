@@ -1,15 +1,77 @@
-/*  structuers */
-#include <stdio.h>
-struct point
+/* inserting (linked list) */
+#include<stdio.h>
+#include<conio.h>
+struct node
 {
-    int x,y,z;
+    int data;
+    struct node *next;
 };
-int main()
+struct node *head=NULL;
+void create(int x)
 {
-    struct point p1={1,2},*p2;
-    p2=&p1;
-    printf("%d%d",(*p2).x,p2->x);
-    printf("\n%d%d,(*p2).y,p2->y");
-    return 0;
-  
-    
+    struct node *nn,*temp=head;
+    nn=(struct node*)malloc(sizeof('struct node'));
+    nn->data=x;
+    nn->next=NULL;
+    if(head==NULL)
+    {
+        head=nn;
+        return;
+    }
+    while(temp->next!=NULL)
+    {
+        temp=temp->next;
+    }
+    temp->next=nn;
+}
+void display()
+{
+    struct node*temp=head;
+    if(head==NULL)
+    {
+        printf("\n nothing in the list to be display");
+    }
+    else
+    {
+        while(temp!=NULL)
+        {
+            printf("%d",temp->data);
+            printf("->");
+            temp=temp->next;
+        }
+    }
+}
+void ins_beg(int x)
+{
+    struct node *nn;
+    nn=(struct node*)malloc(sizeof(struct node));
+    nn->data=x;
+    nn->next=head;
+    head=nn;
+}
+void main()
+{
+    int val,ch;
+    while(1)
+    {
+        printf("\n 1.create");
+        printf("\n 2.display \n 3.exit \n 4.insert_begining");
+        printf("\n enter your choice");
+        scanf("%d",&ch);
+        switch(ch)
+        {
+            case 1:
+            printf("enter the data");
+            scanf("%d",&val);
+            create(val);break;
+            case 2:
+            display();break;
+            case 3:
+            exit(0);
+            case 4:printf("enter the data");
+            scanf("%d",&val);
+            ins_beg(val);
+            break;
+        }
+    }
+}
